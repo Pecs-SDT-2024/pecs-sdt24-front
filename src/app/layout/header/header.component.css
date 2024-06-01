@@ -1,0 +1,81 @@
+header {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.mat-toolbar {
+    background-color: #615EFC;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+header {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    
+}
+
+.left-container {
+    display: flex;
+    align-items: center;
+}
+
+.brand {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #D1D8C5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3), -1px -1px 1px rgba(59, 59, 59, 0.3);
+    font-size: 2.2rem;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.brand:hover {
+    color: #7E8EF1;
+}
+
+.with-shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.accountBtn {
+    background-color:#D1D8C5 !important ;
+    color: black !important;
+    border-radius: 2px;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    margin-right: 10px
+}
+
+.header-item {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-right: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.logo{
+    width: 40px;  /* Added for logo width */
+    height: auto;  /* Added to maintain aspect ratio */
+    margin-right: 10px;  /* Added space between logo and text */
+}
+
+@media (max-width: 768px) {
+    .header-item {
+        font-size: 0.8rem;
+        margin-right: 1rem;
+    }
+}
