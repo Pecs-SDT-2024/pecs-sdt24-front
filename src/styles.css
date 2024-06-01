@@ -1,1 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+/* global styles*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:wght@500&family=Ubuntu&display=swap');
+
+:root {
+  --darker-primary: #333;
+  --lighter-primary: #404040;
+  --purple-primary: rgb(112, 3, 116);
+}
+
+html,
+body {
+  height: fit-content;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
+  /* font-family: 'Courier New', Courier, monospace; */
+  background-color: #333;
+  display: grid;
+  color: #fff;
+
+}
+
+@media (max-width: 768px) {
+  .contnet {
+    flex-wrap: wrap;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+
+  }
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

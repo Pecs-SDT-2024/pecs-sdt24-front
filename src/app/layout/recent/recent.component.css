@@ -1,0 +1,24 @@
+.recent {
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  min-width: 300px;
+  min-height: 200px;
+  margin: auto;
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.recent-header {
+  margin-bottom: 10px;
+}
+
+
+.title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.post {
+  margin-bottom: 10px;
+}
+

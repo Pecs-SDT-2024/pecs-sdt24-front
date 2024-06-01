@@ -1,0 +1,33 @@
+<app-header></app-header>
+<div class="contnet">
+  <app-side></app-side>
+  <div class="posts-container">
+    <div class="post">
+      <div class="post-header">
+        <div class="title">Welcome to Bunblog</div>
+        <div class="sibtitle">
+          <div class="post-date">POSTED AT IMPORTANT DATE</div>
+        </div>
+      </div>
+      <div class="post-content">
+        Welcome dear user. You can add some articles by using add button below
+      </div>
+    </div>
+    <div class="post" *ngFor="let post of articles$ | async" id={{post.id}} routerLink="{{'/posts/' + post.id}}">
+      <div class="post-header">
+        <div class="title">{{post.title}}</div>
+        <div class="sibtitle">
+          <div class="post-date">POSTED AT {{post.posted | date: 'dd/MM/yyyy'}}</div>
+        </div>
+      </div>
+      <div class="post-content">
+        {{post.abstract}}
+      </div>
+    </div>
+    <div class="write-post">
+      <a  routerLink="/write-post" class="write-post-btn">Write Post</a>
+    </div>
+  </div>
+  <app-recent></app-recent>
+</div>
+<app-footer></app-footer>
