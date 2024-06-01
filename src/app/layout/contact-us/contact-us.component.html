@@ -1,1 +1,28 @@
-<p>contact-us works!</p>
+<app-header></app-header>
+
+<div class="contact-details">
+  <div class="contact-email">
+    <a href="mailto:info@pte.hu" class="contact-link">info"&#64;pte.hu</a>
+  </div>
+  <div class="contact-phone">
+    <a href="tel:+36301234567" class="contact-link">+36 30 123 4567</a>
+  </div>
+</div>
+
+<div class="form-div">
+  <div class="the-form-container">
+    <div class="the-form">
+      <div class="title-div">
+        <h1 class="form-title">Send Email</h1>
+      </div>
+      <form class="contact-form" id="my-contact-form" (ngSubmit)="sendEmail()">
+        <input type="text" id="sender-name" name="name" class="form-control" placeholder="Name" required>
+        <input type="email" id="sender-email" name="email" class="form-control" placeholder="Email" required>
+        <textarea name="text" id="sender-text" placeholder="Message" required></textarea>
+        <div class="submit-div"><button class="submit" type="submit">Send</button></div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
