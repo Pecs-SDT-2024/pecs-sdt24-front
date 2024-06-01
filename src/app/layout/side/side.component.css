@@ -1,0 +1,88 @@
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.side-section {
+    margin-bottom: 30px;
+}
+.side-section, .categories-section {
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    width: 300px;
+    text-align: center;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.side-section-header {
+    margin-bottom: 10px;
+}
+
+.side-section img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.title, .numeric {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.subtitle {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.side-section-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.categories, .posts, .comments {
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.categories-section-header {
+    margin-bottom: 10px;
+}
+
+.categories-section {
+    text-align: left;
+
+}
+
+.categories-list {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column;
+    align-items: flex-start; */
+}
+
+.categorie {
+    font-size: 10px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+.categorie button{
+    background-color: var(--purple-primary);
+    color: black;
+    color: rgb(232, 230, 231);
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
