@@ -1,1 +1,18 @@
-<p>post works!</p>
+<app-header></app-header>
+<div class="contnet">
+    <app-side></app-side>
+    <div class="post">
+        <div class="post-header">
+            <div class="title">{{ post?.title }}</div>
+            <div class="sibtitle">
+                <div class="post-date">POSTED AT {{ post?.posted | date: 'dd/MM/yyyy' }}</div>
+            </div>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="post-content">
+            {{ post?.content }}
+        </div>
+    </div>
+    <app-recent-section></app-recent-section>
+</div>
+<app-footer></app-footer>
