@@ -1,1 +1,35 @@
-<p>login works!</p>
+<div class="modal">
+    <h1 mat-dialog-title>LOGIN</h1>
+    <div class="input-wrapper" mat-dialog-content>
+        <mat-form-field>
+            <mat-label>Enter your email</mat-label>
+            <input
+                matInput
+                placeholder="pat@example.com"
+                [formControl]="email"
+                required
+            />
+            <mat-error *ngIf="email.invalid">{{ getErrorMessage() }}</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Enter your password</mat-label>
+            <input matInput [type]="hide1 ? 'password' : 'text'" />
+            <button
+                mat-icon-button
+                matSuffix
+                (click)="hide1 = !hide1"
+                [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide1"
+            >
+                <mat-icon>{{
+                    hide1 ? "visibility_off" : "visibility"
+                }}</mat-icon>
+            </button>
+        </mat-form-field>
+
+    </div>
+    <div mat-dialog-actions>
+        <button mat-button color="primary" (click)="login()">LOGIN</button>
+        <button mat-button (click)="onNoClick()">CANCEL</button>
+    </div>
+</div>
