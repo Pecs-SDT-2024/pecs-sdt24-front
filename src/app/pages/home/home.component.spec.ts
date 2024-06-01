@@ -14,38 +14,38 @@ import { MatMenuModule } from '@angular/material/menu';
 import {MAT_DIALOG_DATA, MatDialogModule, MatDialogRef} from '@angular/material/dialog';
 
 describe('HomeComponent', () => {
-  let component: HomeComponent;
-  let fixture: ComponentFixture<HomeComponent>;
+    let component: HomeComponent;
+    let fixture: ComponentFixture<HomeComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [
-        HomeComponent,
-        HeaderComponent,
-        SideComponent,
-        RecentComponent,
-        FooterComponent,
-      ],
-      imports: [
-        BrowserAnimationsModule,
-        MatIconModule,
-        MatToolbarModule,
-        MatMenuModule,
-        MatDialogModule,
-        HttpClientModule
-      ],
-      providers: [
-        {provide: MatDialogRef, useValue: {}},
-        {provide: MAT_DIALOG_DATA, useValue: []},
-      ]
-    }).compileComponents();
+    beforeEach(async () => {
+        await TestBed.configureTestingModule({
+            declarations: [
+                HomeComponent,
+                HeaderComponent,
+                SideComponent,
+                RecentComponent,
+                FooterComponent,
+            ],
+            imports: [
+                BrowserAnimationsModule,
+                MatIconModule,
+                MatToolbarModule,
+                MatMenuModule,
+                MatDialogModule,
+                HttpClientModule
+            ],
+            providers: [
+                {provide: MatDialogRef, useValue: {}},
+                {provide: MAT_DIALOG_DATA, useValue: []},
+            ]
+        }).compileComponents();
 
-    fixture = TestBed.createComponent(HomeComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+        fixture = TestBed.createComponent(HomeComponent);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+    it('should create', () => {
+        expect(component).toBeTruthy();
+    });
 });
