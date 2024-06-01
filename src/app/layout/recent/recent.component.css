@@ -1,24 +1,27 @@
-.recent {
-  box-sizing: border-box;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  min-width: 300px;
-  min-height: 200px;
-  margin: auto;
-  border-radius: 15px;
-  padding: 15px;
+.recent-section {
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    min-width: 300px;
+    /* max-width: 300px; */
+    min-height: 200px;
+    margin: auto;
+    text-align: center;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: left;
 }
 
-.recent-header {
-  margin-bottom: 10px;
+.recent-section-header {
+    margin-bottom: 10px;
 }
 
 
 .title {
-  font-size: 20px;
-  font-weight: 500;
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .post {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
