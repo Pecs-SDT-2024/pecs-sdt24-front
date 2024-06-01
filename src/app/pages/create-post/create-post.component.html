@@ -1,1 +1,27 @@
-<p>create-post works!</p>
+<app-header></app-header>
+<div class="write-post">
+  <div class="the-form-container">
+    <h2>Create a New Blog Post</h2>
+    <form #postForm="ngForm" (ngSubmit)="createPost(postForm.value)">
+      <div class="form-group">
+        <label for="title">Title:</label>
+        <!-- <input type="text" id="title" [(ngModel)]="postTitle" name="title" required> -->
+        <input type="text" ngModel id="title" name="title" required>
+      </div>
+      <div class="form-group">
+        <label for="content">Description:</label>
+        <!-- <textarea id="content" [(ngModel)]="postContent" name="content" required></textarea> -->
+        <textarea ngModel id="abstract" name="abstract" required></textarea>
+
+        <label for="content">Content:</label>
+        <!-- <textarea id="content" [(ngModel)]="postContent" name="content" required></textarea> -->
+        <textarea ngModel id="content" name="content" required></textarea>
+      </div>
+      <!-- <button (click)="submitPost()">Publish</button> -->
+      <button>Publish</button>
+    </form>
+  </div>
+  </div>
+  
+
+  <app-footer></app-footer>

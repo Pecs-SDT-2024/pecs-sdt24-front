@@ -1,0 +1,91 @@
+.the-form-container {
+  background-color: #615EFC;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  border-radius: 0.4rem;
+  padding-right: 4rem;
+  padding-left: 4rem;
+}
+
+
+.write-post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #D1D8C5;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 0;
+  }
+
+  .write-post h2 {
+    color: #D1D8C5;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 0;
+  }
+
+  .write-post form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .write-post .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .write-post .form-group label {
+    color: #D1D8C5;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .write-post .form-group input[type="text"],
+  .write-post .form-group textarea {
+    font-size: 1rem;
+    width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    outline: none; /* Remove the focus outline */
+    background-color: #D1D8C5;
+    color: #fff;
+  }
+
+.write-post .form-group textarea {
+  width: 400px;
+  height: 8rem; /* Set an initial height */
+  border-radius: 4px;
+}
+
+  .write-post .form-group input[type="text"] {
+    margin-right: 10px;
+  }
+
+  .write-post button {
+    padding: 10px 20px;
+    background-color: #fff;
+    background-color: #D1D8C5;
+    color: #333;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .write-post button:hover {
+    background-color: #7E8EF1;
+}
+
+
