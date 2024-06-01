@@ -1,0 +1,16 @@
+footer {
+    bottom: 0;
+    left: 0;
+    box-shadow: 8px 0 10px 0 rgba(0, 0, 0, 0.2);
+    
+}
+
+.footer-text {
+    width: 100%;
+    text-align: center;
+}
+
+.mat-toolbar {
+    background-color: #615EFC;
+    color: #fff;
+}

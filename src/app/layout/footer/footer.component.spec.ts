@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { FooterComponent } from './footer.component';
+
+// Material Styles
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 describe('FooterComponent', () => {
   let component: FooterComponent;
@@ -8,10 +10,11 @@ describe('FooterComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [FooterComponent]
+      declarations: [ FooterComponent ],
+      imports: [ MatToolbarModule ]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(FooterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
