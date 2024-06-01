@@ -1,1 +1,20 @@
-<p>about-us works!</p>
+<app-header></app-header>
+
+<body>
+    <div class="about-title">
+        Our Developers!
+    </div>
+    <div class="developers-container">
+        <div *ngFor="let developer of developers" class="developer-card">
+            <div class="picContainer">
+                <img [src]="'assets/' + developer.picture" alt="Developer Picture" class="image" />
+            </div>
+            <h2 style="text-align: center;">{{ developer.name }}</h2>
+            <p>Country: {{ developer.country }}</p>
+            <p>Position: {{ developer.position }}</p>
+            <p>About: {{ developer.introduction }}</p>
+        </div>
+    </div>
+</body>
+
+<app-footer></app-footer>
