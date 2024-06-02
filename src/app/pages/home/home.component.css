@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     min-height: 100%;
-    background-color: #3c3c3c;
+    background-color: #D1D8C5;
     color: white;
     min-height: 100vh;
 }
@@ -22,7 +22,7 @@
     box-sizing: border-box;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     /* box-shadow: 4px 8px 8px 4px rgba(0, 0, 0, 0.2); */
-    background-color: #444444;
+    background-color: #615EFC;
     text-align: left;
     border-radius: 15px;
     padding: 15px;
@@ -59,9 +59,9 @@
     border-radius: 4px;
     border: none;
     background-color: #444444;
-    background-color: var(--purple-primary);
+    background-color: #615EFC;
     font-size: 1rem;
-    color: white;
+    color: black;
     cursor: pointer;
     text-decoration: none;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
@@ -69,3 +69,6 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
+.write-post-btn:hover {
+    background-color: #D1D8C5;
+}
