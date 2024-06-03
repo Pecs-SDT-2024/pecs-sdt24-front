@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app.routes';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -11,11 +11,16 @@ import { RecentComponent } from './layout/recent/recent.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PostComponent } from './pages/post/post.component';
 import { RegisterComponent } from './layout/register/register.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoginComponent } from './layout/login/login.component';
+import { LoginRegisterComponent } from './pages/login-register/login-register.component';
 import { AboutUsComponent } from './layout/about-us/about-us.component';
 import { CreatePostComponent } from './pages/create-post/create-post.component';
 import { ContactUsComponent } from './layout/contact-us/contact-us.component';
+
+// Auth
+import {AuthService} from "./services/auth.service";
+import {AuthGuard} from "./services/auth.guard";
 
 // Material Styles
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -42,7 +47,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     AboutUsComponent,
     CreatePostComponent,
     ContactUsComponent,
-
+    LoginRegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +65,16 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    AuthGuard,
+    AuthService,
+  ],
+  exports: [
+    HeaderComponent,
+    FooterComponent,
+    HeaderComponent,
+    HeaderComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

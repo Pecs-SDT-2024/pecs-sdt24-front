@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #7E8EF1;
+  color: #fff;
+}
+
+.login-register-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: calc(100vh - 200px);
+  background-color: #333;
+  padding: 2rem;
+}
+
+.form-container {
+  background-color: #4f4f50;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: none;
+  background-color: #615EFC;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.submit-button:hover {
+  background-color: #5040e0;
+}
+
+@media (max-width: 768px) {
+  .login-register-container {
+    flex-direction: column;
+  }
+
+  .form-container {
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+}

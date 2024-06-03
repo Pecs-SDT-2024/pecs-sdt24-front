@@ -1,20 +1,16 @@
 <header>
     <mat-toolbar>
         <div class="left-container">
-            <button class="accountBtn" mat-raised-button [matMenuTriggerFor]="belowMenu">Account</button>
+            <a routerLink="/login-register" routerLinkActive="active" class="accountBtn">Logout</a>
             <a routerLink="/about-us" class="header-item">About Us</a>
             <a routerLink="/contact-us" class="header-item">Contact Us</a>
             <a routerLink="/write-post" routerLinkActive="active" class="header-item">Write Post</a>
-            <mat-menu #belowMenu="matMenu" yPosition="below">
-                <button mat-menu-item (click)="openLoginDialog()">Login</button>
-                <button mat-menu-item (click)="openRegisterDialog()">Register</button>
-            </mat-menu>
         </div>
         <span class="spacer"></span>
         <a routerLink="/" routerLinkActive="active" class="brand">
             <img src="assets/logo.svg" class="logo">
             SocialNetwork
         </a>
-        
+
     </mat-toolbar>
 </header>

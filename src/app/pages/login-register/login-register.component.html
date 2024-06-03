@@ -1,0 +1,39 @@
+<app-header></app-header>
+
+<div class="login-register-container">
+  <div class="form-container">
+    <div class="form-title">Login</div>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <input type="email" id="login-email" formControlName="email" class="form-control" placeholder="Email" required>
+      <div *ngIf="!loginForm.controls['email'].valid && loginForm.controls['email'].touched" class="error-message">
+        Please enter a valid email.
+      </div>
+      <input type="password" id="login-password" formControlName="password" class="form-control" placeholder="Password" required>
+      <div *ngIf="!loginForm.controls['password'].valid && loginForm.controls['password'].touched" class="error-message">
+        Password must be at least 6 characters long.
+      </div>
+      <button type="submit" class="submit-button" [disabled]="loginForm.invalid">Login</button>
+    </form>
+  </div>
+
+  <div class="form-container">
+    <div class="form-title">Register</div>
+    <form [formGroup]="registerForm" (ngSubmit)="register()">
+      <input type="text" id="register-name" formControlName="name" class="form-control" placeholder="Name" required>
+      <div *ngIf="!registerForm.controls['name'].valid && registerForm.controls['name'].touched" class="error-message">
+        Name is required.
+      </div>
+      <input type="email" id="register-email" formControlName="email" class="form-control" placeholder="Email" required>
+      <div *ngIf="!registerForm.controls['email'].valid && registerForm.controls['email'].touched" class="error-message">
+        Please enter a valid email.
+      </div>
+      <input type="password" id="register-password" formControlName="password" class="form-control" placeholder="Password" required>
+      <div *ngIf="!registerForm.controls['password'].valid && registerForm.controls['password'].touched" class="error-message">
+        Password must be at least 6 characters long.
+      </div>
+      <button type="submit" class="submit-button" [disabled]="registerForm.invalid">Register</button>
+    </form>
+  </div>
+</div>
+
+<app-footer></app-footer>
