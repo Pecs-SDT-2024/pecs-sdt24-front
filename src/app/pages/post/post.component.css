@@ -2,12 +2,13 @@
     padding: 30px;
     display: flex;
     justify-content: space-between;
-    background-color: #3c3c3c;
+    background-color: #D1D8C5;
     min-height: 100vh;
 }
 
 .post {
     display: flex;
+    background-color: #D1D8C5;
     flex-direction: column;
     box-sizing: border-box;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -15,6 +16,10 @@
     border-radius: 15px;
     width: 50%;
     padding: 20px 40px;
+}
+
+.post-date {
+    color: black;
 }
 
 .post-header {
