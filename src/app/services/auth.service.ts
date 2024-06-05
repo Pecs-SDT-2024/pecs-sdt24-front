@@ -1,9 +1,9 @@
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { LoginRequest, RegisterRequest, JwtResponse } from '../models/auth.model';
-import { BehaviorSubject } from 'rxjs';
-import { UserModel } from '../models/user.model';
-import { ResponseModel, ResponseStatus } from '../models/response.model';
+import {Injectable} from '@angular/core';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {JwtResponse, LoginRequest, RegisterRequest} from '../models/auth.model';
+import {BehaviorSubject} from 'rxjs';
+import {UserModel} from '../models/user.model';
+import {ResponseModel, ResponseStatus} from '../models/response.model';
 
 @Injectable()
 export class AuthService {
@@ -43,6 +43,7 @@ export class AuthService {
   login(model: LoginRequest) {
     // Send login request to the server
     const loginRequest = this.http.post<ResponseModel<JwtResponse>>(`${this.baseUrl}/login`, model);
+
     loginRequest.subscribe(resp => {
       if (resp.status === ResponseStatus.SUCCESS) {
         // Save JWT token in local storage
@@ -64,14 +65,7 @@ export class AuthService {
    */
   register(model: RegisterRequest) {
     // Send registration request to the server
-    const req = this.http.post<ResponseModel<void>>(`${this.baseUrl}/register`, model);
-    req.subscribe(resp => {
-      if (resp.status === ResponseStatus.SUCCESS) {
-        console.log("Successfully registered!")
-      }
-    });
-
-    return req;
+    return this.http.post<ResponseModel<void>>(`${this.baseUrl}/register`, model);
   }
 
   /**
@@ -80,14 +74,9 @@ export class AuthService {
    */
   getUserData() {
     // Send request to get user data
-    const req = this.http.get<ResponseModel<UserModel>>(`${this.baseUrl}/login`, {
+    return this.http.get<ResponseModel<UserModel>>(`${this.baseUrl}/login`, {
       headers: this.createAuthHeaders()
     });
-    req.subscribe(resp => {
-      this.user.next(resp.data!);
-    });
-
-    return req;
   }
 
   /**
@@ -98,11 +87,6 @@ export class AuthService {
     // Send logout request to the server
     const req = this.http.get<ResponseModel<void>>(`${this.baseUrl}/logout`, {
       headers: this.createAuthHeaders()
-    });
-    req.subscribe(resp => {
-      if (resp.status === ResponseStatus.SUCCESS) {
-        this.user.next(null);
-      }
     });
 
     // Remove JWT token from local storage

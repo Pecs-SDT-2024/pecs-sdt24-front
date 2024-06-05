@@ -40,8 +40,7 @@ export class LoginRegisterComponent implements OnInit {
     // Logout the user when the component is initialized
     this.authService.logout().subscribe({
       next: () => {
-        // On successful logout, navigate to the login-register page
-        this.router.navigate(['login-register']);
+        // Successful logout
       },
       error: (error: HttpErrorResponse) => {
         // Handle logout error
